@@ -1,0 +1,15 @@
+TARGET := cv
+
+all: $(TARGET).pdf
+
+$(TARGET).pdf: $(TARGET).tex publications.bib
+	lualatex $<
+	bibtex $(TARGET)
+	lualatex $<
+
+clean:
+	rm -f $(TARGET).{aux,bbl,blg,log,out}
+
+realclean: clean
+	rm -f $(TARGET).pdf
+

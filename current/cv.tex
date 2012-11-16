@@ -1,0 +1,353 @@
+% Copyright 2012 Sean Leather (sean.leather@gmail.com)
+
+\documentclass[11pt,a4paper,roman]{moderncv}
+
+%-------------------------------------------------------------------------------
+
+% Style
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+
+% Adjust the page margins
+\usepackage[scale=0.75]{geometry}
+
+% For \xspace: checks for space after command
+\usepackage{xspace}
+
+% For ordinal numbers, use \nth{1} for 1st
+\usepackage[super]{nth}
+
+%-------------------------------------------------------------------------------
+
+% Personal information
+\firstname{Sean}
+\familyname{Leather}
+\email{sean.leather@gmail.com}
+
+% TODO: Import file with other personal information.
+
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+% Make title
+\makecvtitle
+
+%-------------------------------------------------------------------------------
+
+% Commands for abbreviations
+
+% See above
+\newcommand\seeabovedesc{(\textit{See description above.})}
+
+% Cities
+\newcommand\utrecht{Utrecht, The Netherlands}
+\newcommand\austin{Austin, Texas, USA}
+\newcommand\stlouis{St. Louis, Missouri, USA}
+\newcommand\chippewafalls{Chippewa Falls, Wisconsin, USA}
+\newcommand\whitemarsh{White Marsh, Maryland, USA}
+\newcommand\altamont{Altamont, Tennessee, USA}
+\newcommand\chattanooga{Chattanooga, Tennessee, USA}
+\newcommand\london{London, UK}
+\newcommand\centurion{Centurion, South Africa}
+
+% Universities
+\newcommand\uu{Utrecht University}
+\newcommand\wustl{Washington University in St. Louis}
+
+%-------------------------------------------------------------------------------
+
+% Programming languages
+
+\newcommand\Cpp{C{}\texttt{++}\xspace}
+
+%-------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry%
+{Jan 2008 -- present}%
+{PhD}%
+{\uu}%
+{\utrecht}%
+{}%
+{My research focuses on datatype-generic programming and program transformation
+in functional programming languages.}
+
+\cventry%
+{Aug 2003 -- May 2006}%
+{MS in Electrical and Computer Engineering}%
+{University of Texas at Austin}%
+{\austin}%
+{\textit{3.57/4.00}}%
+{My courses focused on computer architecture, VLSI, hardware simulation,
+performance evaluation, compilers, and programming language theory.}
+
+\cventry%
+{Aug 1998 -- May 2003}%
+{BS in Computer Science, BS in Computer Engineering}%
+{\wustl}%
+{\stlouis}%
+{\textit{3.84/4.00}}%
+{}
+
+%-------------------------------------------------------------------------------
+
+\section{Industrial Experience}
+
+%-------------------------------------------------------------------------------
+
+\subsection{Full-time}
+
+\cventry%
+{Jan 2006 -- Oct 2007}%
+{Design Engineer}%
+{Anue Systems}%
+{\austin}%
+{}%
+{I developed embedded software in C/\Cpp, embedded web applications in C/HTML/JavaScript, and RTL test benches in Verilog.
+\begin{itemize}
+\item Designed low-level libraries with clean APIs for AVR microcontrollers, custom FPGAs, real-time clocks, etc.
+\item Designed an extensive Verilog test bench for the custom RTL of a 10-gigabit Ethernet emulator
+\item Introduced AJAX and the use of JavaScript libraries into the web interface development for embedded systems
+\end{itemize}}
+
+%-------------------------------------------------------------------------------
+
+\subsection{Internships and Co-ops}
+
+\cventry%
+{May -- Aug 2005}%
+{Performance Modeling Engineer}%
+{IBM}%
+{\austin}%
+{}%
+{I worked on the next-generation PowerPC architecture performance model.
+\begin{itemize}
+\item Developed a tool to improve the modeling methodology by screening the most important parameters with minimal simulations
+\item Evaluated simultaneous multithreading (SMT) performance to find a speedup of several points
+\end{itemize}}
+
+\cventry%
+{May -- Aug 2004}%
+{Architecture Design Engineer}%
+{Cray}%
+{\chippewafalls}%
+{}%
+{I worked on the vector instruction scheduler for a mixed vector/scalar architecture.
+\begin{itemize}
+\item Developed tools for analyzing vector register dataflow in benchmark kernels
+\item Modeled approaches to scheduling vector instructions to multiple on-chip clusters
+\end{itemize}}
+
+\cventry%
+{Jun -- Aug 2003}%
+{Digital Hardware Design Engineer}%
+{Rockwell Collins}%
+{\whitemarsh}%
+{}%
+{I implemented interfacing logic in Verilog for controlling high-performance frequency conversion RTL in FPGAs.}
+
+\cventry%
+{May -- Aug 2002}%
+{Avionics Research and Development Engineer}%
+{Boeing}%
+{\stlouis}%
+{}%
+{I implemented a driver for touchscreen monitors in an embedded, real-time operating system (RTOS).}
+
+\cventry%
+{Aug -- Dec 2001}%
+{Avionics Test Engineer}%
+{Boeing}%
+{\stlouis}%
+{}%
+{I tested, debugged, and repaired electronics and firmware on single-board computers for the AV-8B avionics test bench.}
+
+\cventry%
+{Jan -- May 2001}%
+{Embedded Software Engineer}%
+{Boeing}%
+{\stlouis}%
+{}%
+{I designed, implemented, tested, and documented a cross-platform \Cpp framework for logging flight simulation network data on Irix, Windows, Solaris, and a Green Hills RTOS.}
+
+\cventry%
+{May -- Aug 1999}%
+{Web Applications Developer}%
+{Higher Technology Services}%
+{\chattanooga}%
+{}%
+{I managed PC and SPARC Linux servers and created marketing-oriented data-driven websites for customers in Perl.}
+
+%-------------------------------------------------------------------------------
+
+\subsection{Miscellaneous}
+
+\cventry%
+{May -- Jul 2001}%
+{Waterfront Director}%
+{Skymont Scout Reservation}%
+{\altamont}%
+{}%
+{I managed activities and staff in the aquatics area at the Boy Scout summer camp.
+\begin{itemize}
+\item Trained instructors for rowing, canoeing, and swimming
+\item Instructed Scouts in lifeguarding
+\end{itemize}}
+
+%-------------------------------------------------------------------------------
+
+\section{Academic Experience}
+
+\newcommand\coursenote{\scriptsize [U]ndergraduate and [G]raduate courses (with year)}
+
+%-------------------------------------------------------------------------------
+
+\subsection{Teaching}
+
+\cvlistitem{\coursenote}
+
+\cventry%
+{}%
+{Languages and Compilers (INFOB3TC)}%
+{\uu}%
+{}%
+{U(2)}%
+{Formal languages, grammars, parsing, and code generation with Haskell.
+\begin{itemize}
+\item Nov -- Dec 2012
+\item Nov 2011 -- Jan 2012
+\end{itemize}}
+
+\cventry%
+{}%
+{Generic Programming (INFOGP)}%
+{\uu}%
+{}%
+{G}%
+{Datatype-generic programming with Haskell and Agda.
+\begin{itemize}
+\item Sep -- Nov 2012
+\item Sep -- Nov 2011
+\end{itemize}}
+
+%-------------------------------------------------------------------------------
+
+\subsection{Teaching Assistant}
+
+\cvlistitem{\coursenote}
+
+\cventry%
+{}%
+{Generic Programming (INFOGP)}%
+{\uu}%
+{}%
+{}%
+{\begin{itemize}
+\item Sep - Nov 2010
+\item Apr - Jul 2009
+\end{itemize}}
+
+\cventry%
+{}%
+{Functional Programming (INFOFP)}%
+{\uu}%
+{}%
+{U(2)}%
+{Basics, lists, recursion, I/O, data structures, type classes, reasoning with Haskell.
+\begin{itemize}
+\item Nov 2009 -- Feb 2010
+\end{itemize}}
+
+\cventry%
+{}%
+{Languages and Compilers (INFOB3TC)}%
+{\uu}%
+{}%
+{}%
+{\begin{itemize}
+\item Nov 2008 -- Jan 2009
+\end{itemize}}
+
+\cventry%
+{}%
+{Software Engineering (INFOSWE)}%
+{\uu}%
+{}%
+{G}%
+{Software life cycle, formal requirements, specification with Z, build/version management, aspect-oriented programming, and testing.
+\begin{itemize}
+\item Sep - Nov 2008
+\end{itemize}}
+
+\cventry%
+{}%
+{Computer Science II (CS~102G)}%
+{\wustl}%
+{}%
+{U(1)}%
+{Object-oriented programming concepts, exceptions, GUIs, threads, concurrency, synchronization in Java.
+\begin{itemize}
+\item Jan -- Apr 2000
+\end{itemize}}
+
+\cventry%
+{}%
+{Programming Concepts and Practice (CS~504N)}%
+{\wustl}%
+{}%
+{G(1)}%
+{Object-oriented programming concepts, threads, basic algorithms in Java.
+\begin{itemize}
+\item Aug -- Dec 1999
+\end{itemize}}
+
+%-------------------------------------------------------------------------------
+
+% Publications
+
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{publications}
+
+%-------------------------------------------------------------------------------
+
+\section{Talks}
+
+\cventry%
+{Jun 2012}%
+{Generic Programming in Haskell}%
+{Lambda Luminaries}%
+{\centurion}%
+{}%
+{Two-part talk introducing datatype-generic programming and describing ``xformat''}
+
+\cventry%
+{Nov 2011}%
+{Generic Deriving in GHC 7.2}%
+{Dutch Haskell Users Group}%
+{\utrecht}%
+{}%
+{Motivation behind and design of the ``generic-deriving'' library included with GHC 7.2}
+
+\cventry%
+{Nov 2009}%
+{Extensibility and Type Safety in Formatting: The Design of ``xformat''}%
+{Dutch Haskell Users Group}%
+{\utrecht}%
+{}%
+{Motivation behind and design of a library aimed at solving the ``\texttt{printf} problem''}
+
+\cventry%
+{Jul 2009}%
+{Fun and Generic Things to Do with EMGM}%
+{London Haskell Users Group}%
+{\london}%
+{}%
+{Writing and using generic functions with the library ``Extensible and Modular Generics for the Masses''}
+
+%-------------------------------------------------------------------------------
+
+\end{document}
+
