@@ -2,7 +2,7 @@ TARGET := cv
 
 all: $(TARGET).pdf
 
-$(TARGET).pdf: $(TARGET).tex personal.tex photo.pdf publications.bib
+$(TARGET).pdf: $(TARGET).tex personal.tex photo.pdf publications.bib moderncvstylecustom.sty
 	lualatex $<
 	bibtex $(TARGET)
 	lualatex $<

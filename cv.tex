@@ -1,12 +1,15 @@
 % Copyright 2019 Sean Leather (sean.leather@gmail.com)
 
 \documentclass[11pt,a4paper,roman]{moderncv}
+\usepackage{fontspec}
+% https://tex.stackexchange.com/a/209247/16670
+\defaultfontfeatures{Ligatures=TeX}
 
 %-------------------------------------------------------------------------------
 
 % Style
-\moderncvstyle{casual}
 \moderncvcolor{blue}
+\moderncvstyle{custom}
 
 % Adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -46,6 +49,9 @@
 % See above
 \newcommand\seeabovedesc{(\textit{See description above.})}
 
+% Dates
+\newcommand\daterange[2]{#1\,--\,#2}
+
 % Cities
 \newcommand\altamont{Altamont, Tennessee, USA}
 \newcommand\austin{Austin, Texas, USA}
@@ -81,7 +87,7 @@
 \subsection{Full-time}
 
 \cventry%
-{Jul 2015--Dec 2016}%
+{\daterange{Jul 2015}{Dec 2016}}%
 {Software Engineer}%
 {Rheo Systems (Pty) Ltd}%
 {\pretoria}%
@@ -99,7 +105,7 @@
 \end{itemize}}
 
 \cventry%
-{Dec 2013--Apr 2015}%
+{\daterange{Dec 2013}{Apr 2015}}%
 {Software Engineer}%
 {Daggerboard, Inc. (Docmunch, doxIQ)}%
 {\sanfrancisco{} (working remotely)}%
@@ -113,7 +119,7 @@
 \end{itemize}}
 
 \cventry%
-{Jan 2006--Oct 2007}%
+{\daterange{Jan 2006}{Oct 2007}}%
 {Design Engineer}%
 {Anue Systems}%
 {\austin}%
@@ -134,7 +140,7 @@
 \subsection{Internships and Co-ops}
 
 \cventry%
-{May--Aug 2005}%
+{\daterange{May}{Aug 2005}}%
 {Performance Modeling Engineer}%
 {IBM}%
 {\austin}%
@@ -146,7 +152,7 @@
 \end{itemize}}
 
 \cventry%
-{May--Aug 2004}%
+{\daterange{May}{Aug 2004}}%
 {Architecture Design Engineer}%
 {Cray}%
 {\chippewafalls}%
@@ -158,7 +164,7 @@
 \end{itemize}}
 
 \cventry%
-{Jun--Aug 2003}%
+{\daterange{Jun}{Aug 2003}}%
 {Digital Hardware Design Engineer}%
 {Rockwell Collins}%
 {\whitemarsh}%
@@ -166,7 +172,7 @@
 {I implemented interfacing logic in Verilog for controlling high-performance frequency conversion RTL in FPGAs.}
 
 \cventry%
-{May--Aug 2002}%
+{\daterange{May}{Aug 2002}}%
 {Avionics Research and Development Engineer}%
 {Boeing}%
 {\stlouis}%
@@ -174,7 +180,7 @@
 {I implemented a driver for touchscreen monitors in an embedded, real-time operating system (RTOS).}
 
 \cventry%
-{Aug--Dec 2001}%
+{\daterange{Aug}{Dec 2001}}%
 {Avionics Test Engineer}%
 {Boeing}%
 {\stlouis}%
@@ -182,7 +188,7 @@
 {I tested, debugged, and repaired custom electronics and firmware on single-board computers for the AV-8B avionics test bench.}
 
 \cventry%
-{Jan--May 2001}%
+{\daterange{Jan}{May 2001}}%
 {Embedded Software Engineer}%
 {Boeing}%
 {\stlouis}%
@@ -190,7 +196,7 @@
 {I designed, implemented, tested, and documented a cross-platform \Cpp framework for logging flight simulation network data on Irix, Windows, Solaris, and a Green Hills RTOS.}
 
 \cventry%
-{May--Aug 1999}%
+{\daterange{May}{Aug 1999}}%
 {Web Applications Developer}%
 {Higher Technology Services}%
 {\chattanooga}%
@@ -202,7 +208,7 @@
 \subsection{Miscellaneous}
 
 \cventry%
-{May--Jul 2001}%
+{\daterange{May}{Jul 2001}}%
 {Waterfront Director}%
 {Skymont Scout Reservation}%
 {\altamont}%
@@ -222,7 +228,7 @@
 \section{Education}
 
 \cventry%
-{Jan 2008--present}%
+{\daterange{Jan 2008}{present}}%
 {PhD}%
 {\uu}%
 {\utrecht}%
@@ -232,7 +238,7 @@ in functional programming languages.\newline{}%
 Advisor: Johan Jeuring}
 
 \cventry%
-{Aug 2003--May 2006}%
+{\daterange{Aug 2003}{May 2006}}%
 {MS in Electrical and Computer Engineering}%
 {University of Texas at Austin}%
 {\austin}%
@@ -241,7 +247,7 @@ Advisor: Johan Jeuring}
 performance evaluation, compilers, and programming language theory.}
 
 \cventry%
-{Aug 1998--May 2003}%
+{\daterange{Aug 1998}{May 2003}}%
 {BS in Computer Science, BS in Computer Engineering}%
 {\wustl}%
 {\stlouis}%
@@ -268,8 +274,8 @@ performance evaluation, compilers, and programming language theory.}
 {U(2)}%
 {Formal languages, grammars, parsing, and code generation with Haskell.
 \begin{itemize}
-\item Nov--Dec 2012
-\item Nov 2011--Jan 2012
+\item \daterange{Nov}{Dec 2012}
+\item \daterange{Nov 2011}{Jan 2012}
 \end{itemize}}
 
 \cventry%
@@ -280,8 +286,8 @@ performance evaluation, compilers, and programming language theory.}
 {G}%
 {Datatype-generic programming with Haskell and Agda.
 \begin{itemize}
-\item Sep--Nov 2012
-\item Sep--Nov 2011
+\item \daterange{Sep}{Nov 2012}
+\item \daterange{Sep}{Nov 2011}
 \end{itemize}}
 
 %-------------------------------------------------------------------------------
@@ -297,8 +303,8 @@ performance evaluation, compilers, and programming language theory.}
 {}%
 {}%
 {\begin{itemize}
-\item Sep--Nov 2010
-\item Apr--Jul 2009
+\item \daterange{Sep}{Nov 2010}
+\item \daterange{Apr}{Jul 2009}
 \end{itemize}}
 
 \cventry%
@@ -309,7 +315,7 @@ performance evaluation, compilers, and programming language theory.}
 {U(2)}%
 {Basics, lists, recursion, I/O, data structures, type classes, reasoning with Haskell.
 \begin{itemize}
-\item Nov 2009--Feb 2010
+\item \daterange{Nov 2009}{Feb 2010}
 \end{itemize}}
 
 \cventry%
@@ -319,7 +325,7 @@ performance evaluation, compilers, and programming language theory.}
 {}%
 {}%
 {\begin{itemize}
-\item Nov 2008--Jan 2009
+\item \daterange{Nov 2008}{Jan 2009}
 \end{itemize}}
 
 \cventry%
@@ -330,7 +336,7 @@ performance evaluation, compilers, and programming language theory.}
 {G}%
 {Software life cycle, formal requirements, specification with Z, build/version management, aspect-oriented programming, and testing.
 \begin{itemize}
-\item Sep--Nov 2008
+\item \daterange{Sep}{Nov 2008}
 \end{itemize}}
 
 \cventry%
@@ -341,7 +347,7 @@ performance evaluation, compilers, and programming language theory.}
 {U(1)}%
 {Object-oriented programming concepts, exceptions, GUIs, threads, concurrency, synchronization in Java.
 \begin{itemize}
-\item Jan--Apr 2000
+\item \daterange{Jan}{Apr 2000}
 \end{itemize}}
 
 \cventry%
@@ -352,7 +358,7 @@ performance evaluation, compilers, and programming language theory.}
 {G(1)}%
 {Object-oriented programming concepts, threads, basic algorithms in Java.
 \begin{itemize}
-\item Aug--Dec 1999
+\item \daterange{Aug}{Dec 1999}
 \end{itemize}}
 
 %-------------------------------------------------------------------------------
@@ -436,21 +442,21 @@ performance evaluation, compilers, and programming language theory.}
 
 \section{Professional \& Technical Organizations}
 
-\cvitem[-1em]{1999--present}{ACM
+\cvitem[-1em]{\daterange{1999}{present}}{ACM
 \begin{itemize}
 \item 1999, 2000: Treasurer, \wustlshort{} student chapter
 \item 2001: President, \wustlshort{} student chapter
 \end{itemize}}
 
-\cvitem[-1em]{2009--2013}{Dutch Haskell Users Group (``Dutch HUG'')
+\cvitem[-1em]{\daterange{2009}{2013}}{Dutch Haskell Users Group (``Dutch HUG'')
 \begin{itemize}
-\item May 2010--Mar 2013: Monthly Meeting Coordinator
+\item \daterange{May 2010}{Mar 2013}: Monthly Meeting Coordinator
 \item Apr 2010, Apr 2012: Organized Dutch HUG Days (talks, hackathon)
 \end{itemize}}
 
-\cvitem[-1em]{2002--2011}{IEEE
+\cvitem[-1em]{\daterange{2002}{2011}}{IEEE
 \begin{itemize}
-\item 2002--2003: Vice president, \wustlshort{} student chapter
+\item \daterange{2002}{2003}: Vice president, \wustlshort{} student chapter
 \end{itemize}}
 
 %-------------------------------------------------------------------------------
