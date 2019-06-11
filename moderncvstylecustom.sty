@@ -136,7 +136,9 @@
   \cvitem[#1]{{\fontspec{Fira Sans Compressed Book}#2}}%
   {#3}}
 
-\endinput
+% moderncvstylecustom.sty:
+\patchcmd{\makeletterclosing}{\bfseries}{\bfseries\color{color1}}{}{}
 
+\endinput
 
 %% end of file `moderncvstylecustom.sty'.

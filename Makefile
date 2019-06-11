@@ -1,15 +1,20 @@
-TARGET := cv
+all: cv.pdf letter.pdf
 
-all: $(TARGET).pdf
+cv.pdf: common.tex personal.tex photo.pdf publications.bib moderncvstylecustom.sty
+letter.pdf: common.tex personal.tex moderncvstylecustom.sty
 
-$(TARGET).pdf: $(TARGET).tex personal.tex photo.pdf publications.bib moderncvstylecustom.sty
+cv.pdf: cv.tex
 	lualatex $<
-	bibtex $(TARGET)
+	bibtex $(subst .tex,.aux,$<)
+	lualatex $<
+	lualatex $<
+
+letter.pdf: letter.tex
+	lualatex $<
 	lualatex $<
 
 clean:
-	rm -f $(TARGET).{aux,bbl,blg,log,out} personal.aux
+	rm -f *.{aux,bbl,blg,log,out} personal.aux
 
 realclean: clean
-	rm -f $(TARGET).pdf
-
+	rm -f cv.pdf letter.pdf

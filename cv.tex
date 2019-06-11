@@ -1,44 +1,8 @@
 % Copyright 2019 Sean Leather (sean.leather@gmail.com)
 
 \documentclass[11pt,a4paper,roman]{moderncv}
-\usepackage{fontspec}
-% https://tex.stackexchange.com/a/209247/16670
-\defaultfontfeatures{Ligatures=TeX}
-
-%-------------------------------------------------------------------------------
-
-% Style
-\moderncvcolor{burgundy}
-\moderncvstyle{custom}
-
-% Adjust the page margins
-\usepackage[scale=0.75]{geometry}
-% https://tex.stackexchange.com/a/114447/16670
-\setlength{\hintscolumnwidth}{20ex} % width of left column
-
-% For \xspace: checks for space after command
-\usepackage{xspace}
-
-% For ordinal numbers, use \nth{1} for 1st
-\usepackage[super]{nth}
-
-% For options to \begin{itemize} such as leftmargin and nosep
-% - https://tex.stackexchange.com/a/91128/16670
-\usepackage{enumitem}
-
-%-------------------------------------------------------------------------------
-
-% Personal information
-\firstname{Sean}
-\familyname{Leather}
-\email{sean.leather@gmail.com}
-\photo[64pt][0.4pt]{photo} % height and frame thickness
-
-% Import file with other personal information: \address, \phone, \mobile
+\include{common}
 \include{personal}
-
-% My current professional title
-\title{Software Engineer, Specialist in Type-Safe Languages}
 
 %-------------------------------------------------------------------------------
 
