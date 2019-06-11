@@ -1,0 +1,142 @@
+%% start of file `moderncvstylecustom.sty'.
+%% adapted from `moderncvstylecasual.sty'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%% Copyright 2019 Sean Leather (_._@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+%-------------------------------------------------------------------------------
+%                identification
+%-------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moderncvstylecustom}[2019/06/10 v1.0.0 custom curriculum vitae style]
+
+% head section alignment options: "left" (default) or "right"
+\@initializecommand{\moderncvstyleheadoptions}{}
+\DeclareOption{left} {\edef\moderncvstyleheadoptions{\moderncvstyleheadoptions,left}}
+\DeclareOption{right}{\edef\moderncvstyleheadoptions{\moderncvstyleheadoptions,right}}
+
+\DeclareOption*{}% avoid choking on unknown options
+\ExecuteOptions{right}
+\ProcessOptions*\relax% \ProcessOptions* processes the options in the order provided (i.e., with the later ones possibly overriding the former ones), while \ProcessOptions processes them in the order of the package
+
+%-------------------------------------------------------------------------------
+%                fonts & icons
+%-------------------------------------------------------------------------------
+% Latin Modern fonts
+%\ifxetexorluatex
+%  \setmainfont{Latin Modern Roman}
+%  \setsansfont{Latin Modern Sans}
+%  \setmathfont{Latin Modern Math}
+%\else
+% \IfFileExists{lmodern.sty}%
+%   {\RequirePackage{lmodern}}%
+%   {}
+%\fi
+
+% moderncvstylecustom.sty:
+\RequirePackage{fontspec}
+\setmainfont{Garamond Premier Pro}
+\setmonofont[Scale=MatchLowercase]{Fira Code Light}
+
+% symbols
+\moderncvicons{awesome}
+
+
+%-------------------------------------------------------------------------------
+%                header, body & footer
+%-------------------------------------------------------------------------------
+\moderncvhead[\moderncvstyleheadoptions]{2}
+\moderncvbody{1}
+\moderncvfoot{1}
+
+% moderncvstylecustom.sty:
+% - https://tex.stackexchange.com/a/172866/16670
+\RequirePackage{etoolbox}
+\patchcmd{\makecvhead}{\color{color2!50}\@firstname}{\color{color1}\@firstname}{}{}
+\patchcmd{\makecvhead}{\color{color2}\@lastname}{\color{color1}\@lastname}{}{}
+
+% moderncvstylecustom.sty:
+% - https://tex.stackexchange.com/a/253116/16670
+\RenewDocumentCommand{\subsection}{sm}{%
+  \par\addvspace{2ex}%
+  \phantomsection{}% reset the anchor for hyperrefs
+  \addcontentsline{toc}{subsection}{#2}%
+  \cvitem[0ex]{}{\strut\subsectionstyle{#2}}%
+  \par\nobreak\addvspace{.5ex}\@afterheading}% to avoid a pagebreak after the heading
+
+% moderncvstylecustom.sty:
+% - https://tex.stackexchange.com/a/458690/16670
+% - https://tex.stackexchange.com/a/49841/16670
+\renewcommand*\namefont{\fontspec{GaramondPremrPro-MedDisp}\fontsize{50}{60}\selectfont}
+\renewcommand*\titlefont{\fontspec{Fira Sans Condensed Light Italic}\fontsize{18}{22}\selectfont}
+\renewcommand*\sectionfont{\fontspec{Garamond Premier Pro}\fontsize{20}{24}\selectfont}
+\renewcommand*\subsectionfont{\fontspec{GaramondPremrPro-Med}\fontsize{14}{16}\selectfont}
+\renewcommand*\addressfont{\fontspec{Fira Sans Condensed Light Italic}\selectfont}
+
+\renewcommand*{\namestyle}[1]{{#1}}
+
+% moderncvstylecustom.sty:
+\newcommand\professionentry[6]{%
+  \cventry{{\fontspec{Fira Sans Compressed Book}#1}}%
+  {{\fontspec{Fira Sans Compressed Medium}#2}}%
+  {{\fontspec{Fira Sans Compressed Book Italic}#3}}%
+  {{\fontspec{Fira Sans Compressed Light}#4}}%
+  {#5}%
+  {#6}}
+
+% moderncvstylecustom.sty:
+\newcommand\educationentry[5]{%
+  \cventry{{\fontspec{Fira Sans Compressed Book}#1}}%
+  {{\fontspec{Fira Sans Compressed Medium}#2}}%
+  {{\fontspec{Fira Sans Compressed Book Italic}#3}}%
+  {{\fontspec{Fira Sans Compressed Light}#4}}%
+  {}%
+  {#5}}
+\newcommand\educationentrygpa[6]{%
+  \cventry{{\fontspec{Fira Sans Compressed Book}#1}}%
+  {{\fontspec{Fira Sans Compressed Medium}#2}}%
+  {{\fontspec{Fira Sans Compressed Book Italic}#3}}%
+  {{\fontspec{Fira Sans Compressed Light}#4}}%
+  {{\fontspec{Fira Sans Compressed Light Italic}#5}}%
+  {#6}}
+
+% moderncvstylecustom.sty:
+\newcommand\teachingentry[4]{%
+  \cventry{}%
+  {{\fontspec{Fira Sans Compressed Medium}#1}}%
+  {{\fontspec{Fira Sans Compressed Book Italic}#2}}%
+  {{\fontspec{Fira Sans Compressed Light}#3}}%
+  {}%
+  {#4}}
+
+% moderncvstylecustom.sty:
+\newcommand\teachingasstentry[4]{%
+  \cventry{}%
+  {{\fontspec{Fira Sans Compressed Medium}#1}}%
+  {{\fontspec{Fira Sans Compressed Book Italic}#2}}%
+  {{\fontspec{Fira Sans Compressed Light}#3}}%
+  {}%
+  {#4}}
+
+% moderncvstylecustom.sty:
+\newcommand\talksentry[6]{%
+  \cventry{{\fontspec{Fira Sans Compressed Book}#1}}%
+  {{\fontspec{Fira Sans Compressed Medium}#2}}%
+  {{\fontspec{Fira Sans Compressed Book Italic}#3}}%
+  {{\fontspec{Fira Sans Compressed Light}#4}}%
+  {#5}%
+  {#6}}
+
+% moderncvstylecustom.sty:
+\newcommand*\ccvitem[3][.25em]{%
+  \cvitem[#1]{{\fontspec{Fira Sans Compressed Book}#2}}%
+  {#3}}
+
+\endinput
+
+
+%% end of file `moderncvstylecustom.sty'.

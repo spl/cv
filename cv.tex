@@ -8,18 +8,23 @@
 %-------------------------------------------------------------------------------
 
 % Style
-\moderncvcolor{blue}
+\moderncvcolor{burgundy}
 \moderncvstyle{custom}
 
 % Adjust the page margins
 \usepackage[scale=0.75]{geometry}
-\setlength{\hintscolumnwidth}{22ex} % width of first column
+% https://tex.stackexchange.com/a/114447/16670
+\setlength{\hintscolumnwidth}{20ex} % width of left column
 
 % For \xspace: checks for space after command
 \usepackage{xspace}
 
 % For ordinal numbers, use \nth{1} for 1st
 \usepackage[super]{nth}
+
+% For options to \begin{itemize} such as leftmargin and nosep
+% - https://tex.stackexchange.com/a/91128/16670
+\usepackage{enumitem}
 
 %-------------------------------------------------------------------------------
 
@@ -86,46 +91,46 @@
 
 \subsection{Full-time}
 
-\cventry%
+\professionentry%
 {\daterange{Jul 2015}{Dec 2016}}%
 {Software Engineer}%
 {Rheo Systems (Pty) Ltd}%
 {\pretoria}%
 {}%
 {I worked on a workflow project management application for large-scale construction companies. I first joined to help with Haskell development and later became the primary developer for the application web frontend and backend.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item Developed the web frontend with GHCJS and Reflex and the backend with Yesod
 \item Used PostgreSQL through the Persistent library and also created many SQL functions for optimizing our use of the database and for migration
 \item Contributed to the Android application
-  \begin{itemize}
+  \begin{itemize}[leftmargin=2em,nosep]
   \item Converted the entire application to use the Realm mobile database
   \item Reviewed code and managed releases
   \end{itemize}
 \item Worked on AWS operations including EC2 and Elastic Beanstalk with Docker containers as well as S3 for file storage
 \end{itemize}}
 
-\cventry%
+\professionentry%
 {\daterange{Dec 2013}{Apr 2015}}%
 {Software Engineer}%
 {Daggerboard, Inc. (Docmunch, doxIQ)}%
 {\sanfrancisco{} (working remotely)}%
 {}%
 {I worked on web applications for extracting data from PDFs (Docmunch) and document hosting with analytics (doxIQ).
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item Focused primarily on Yesod (Haskell) and MongoDB backend
 \item Created Haskell libraries for web APIs (Box View, HubSpot, Marketo)
 \item Extended and debugged TypeScript/AngularJS frontend
 \item Worked on AWS operations including EC2 and Elastic Beanstalk with Docker containers
 \end{itemize}}
 
-\cventry%
+\professionentry%
 {\daterange{Jan 2006}{Oct 2007}}%
 {Design Engineer}%
 {Anue Systems}%
 {\austin}%
 {}%
 {I developed embedded software in C/\Cpp, embedded web applications in C/HTML/JavaScript, and RTL test benches in Verilog.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item Designed low-level libraries with clean APIs for AVR microcontrollers, custom FPGA interfaces, real-time clocks, etc.
 \item Designed an extensive Verilog test bench for custom RTL of a 10-gigabit Ethernet emulator
 \item Introduced the first uses of AJAX and JavaScript libraries into the web interface development for embedded systems
@@ -139,31 +144,31 @@
 
 \subsection{Internships and Co-ops}
 
-\cventry%
+\professionentry%
 {\daterange{May}{Aug 2005}}%
 {Performance Modeling Engineer}%
 {IBM}%
 {\austin}%
 {}%
 {I worked on the next-generation PowerPC architecture performance model.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item Developed a tool to improve the modeling methodology by screening the most important parameters with minimal simulations
 \item Evaluated simultaneous multithreading (SMT) performance to find a speedup of several percentage points
 \end{itemize}}
 
-\cventry%
+\professionentry%
 {\daterange{May}{Aug 2004}}%
 {Architecture Design Engineer}%
 {Cray}%
 {\chippewafalls}%
 {}%
 {I worked on the vector instruction scheduler for a mixed vector/scalar architecture.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item Developed tools for analyzing vector register dataflow in benchmark kernels
 \item Modeled approaches to scheduling vector instructions to multiple on-chip clusters
 \end{itemize}}
 
-\cventry%
+\professionentry%
 {\daterange{Jun}{Aug 2003}}%
 {Digital Hardware Design Engineer}%
 {Rockwell Collins}%
@@ -171,7 +176,7 @@
 {}%
 {I implemented interfacing logic in Verilog for controlling high-performance frequency conversion RTL in FPGAs.}
 
-\cventry%
+\professionentry%
 {\daterange{May}{Aug 2002}}%
 {Avionics Research and Development Engineer}%
 {Boeing}%
@@ -179,7 +184,7 @@
 {}%
 {I implemented a driver for touchscreen monitors in an embedded, real-time operating system (RTOS).}
 
-\cventry%
+\professionentry%
 {\daterange{Aug}{Dec 2001}}%
 {Avionics Test Engineer}%
 {Boeing}%
@@ -187,7 +192,7 @@
 {}%
 {I tested, debugged, and repaired custom electronics and firmware on single-board computers for the AV-8B avionics test bench.}
 
-\cventry%
+\professionentry%
 {\daterange{Jan}{May 2001}}%
 {Embedded Software Engineer}%
 {Boeing}%
@@ -195,9 +200,9 @@
 {}%
 {I designed, implemented, tested, and documented a cross-platform \Cpp framework for logging flight simulation network data on Irix, Windows, Solaris, and a Green Hills RTOS.}
 
-\cventry%
+\professionentry%
 {\daterange{May}{Aug 1999}}%
-{Web Applications Developer}%
+{System Administrator \& Web Developer}%
 {Higher Technology Services}%
 {\chattanooga}%
 {}%
@@ -207,37 +212,32 @@
 
 \subsection{Miscellaneous}
 
-\cventry%
+\professionentry%
 {\daterange{May}{Jul 2001}}%
 {Waterfront Director}%
 {Skymont Scout Reservation}%
 {\altamont}%
 {}%
 {I managed the staff and activities in the aquatics area at a Boy Scout summer camp.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item Trained boys to teach rowing, canoeing, and swimming
 \item Instructed Scouts in lifeguarding
 \end{itemize}}
 
 %-------------------------------------------------------------------------------
-% NOTE! Page break to prevent the next subsection header from being alone at the
-%       end of the page.
-\newpage
-%-------------------------------------------------------------------------------
 
 \section{Education}
 
-\cventry%
+\educationentry%
 {\daterange{Jan 2008}{present}}%
 {PhD}%
 {\uu}%
 {\utrecht}%
-{}%
 {My research focuses on datatype-generic programming and program transformation
 in functional programming languages.\newline{}%
 Advisor: Johan Jeuring}
 
-\cventry%
+\educationentrygpa%
 {\daterange{Aug 2003}{May 2006}}%
 {MS in Electrical and Computer Engineering}%
 {University of Texas at Austin}%
@@ -246,7 +246,7 @@ Advisor: Johan Jeuring}
 {My courses focused on computer architecture, VLSI, hardware simulation,
 performance evaluation, compilers, and programming language theory.}
 
-\cventry%
+\educationentrygpa%
 {\daterange{Aug 1998}{May 2003}}%
 {BS in Computer Science, BS in Computer Engineering}%
 {\wustl}%
@@ -255,10 +255,14 @@ performance evaluation, compilers, and programming language theory.}
 {}
 
 %-------------------------------------------------------------------------------
+% NOTE! Page break to prevent the next subsection header from being alone at the
+%       end of the page.
+\newpage
+%-------------------------------------------------------------------------------
 
 \section{Academic Experience}
 
-\newcommand\coursenote{\scriptsize [U]ndergraduate and [G]raduate courses (with year)}
+\newcommand\coursenote{{\fontspec[Scale=0.75]{GaramondPremrPro-Capt}{}[U]ndergraduate and [G]raduate courses (and optional year)}}
 
 %-------------------------------------------------------------------------------
 
@@ -266,26 +270,22 @@ performance evaluation, compilers, and programming language theory.}
 
 \cvlistitem{\coursenote}
 
-\cventry%
-{}%
+\teachingentry%
 {Languages and Compilers (INFOB3TC)}%
 {\uu}%
-{}%
 {U(2)}%
 {Formal languages, grammars, parsing, and code generation with Haskell.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{Nov}{Dec 2012}
 \item \daterange{Nov 2011}{Jan 2012}
 \end{itemize}}
 
-\cventry%
-{}%
+\teachingentry%
 {Generic Programming (INFOGP)}%
 {\uu}%
-{}%
 {G}%
 {Datatype-generic programming with Haskell and Agda.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{Sep}{Nov 2012}
 \item \daterange{Sep}{Nov 2011}
 \end{itemize}}
@@ -296,68 +296,56 @@ performance evaluation, compilers, and programming language theory.}
 
 \cvlistitem{\coursenote}
 
-\cventry%
-{}%
+\teachingasstentry%
 {Generic Programming (INFOGP)}%
 {\uu}%
-{}%
-{}%
-{\begin{itemize}
+{G}%
+{\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{Sep}{Nov 2010}
 \item \daterange{Apr}{Jul 2009}
 \end{itemize}}
 
-\cventry%
-{}%
+\teachingasstentry%
 {Functional Programming (INFOFP)}%
 {\uu}%
-{}%
 {U(2)}%
 {Basics, lists, recursion, I/O, data structures, type classes, reasoning with Haskell.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{Nov 2009}{Feb 2010}
 \end{itemize}}
 
-\cventry%
-{}%
+\teachingasstentry%
 {Languages and Compilers (INFOB3TC)}%
 {\uu}%
-{}%
-{}%
-{\begin{itemize}
+{U(2)}%
+{\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{Nov 2008}{Jan 2009}
 \end{itemize}}
 
-\cventry%
-{}%
+\teachingasstentry%
 {Software Engineering (INFOSWE)}%
 {\uu}%
-{}%
 {G}%
 {Software life cycle, formal requirements, specification with Z, build/version management, aspect-oriented programming, and testing.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{Sep}{Nov 2008}
 \end{itemize}}
 
-\cventry%
-{}%
+\teachingasstentry%
 {Computer Science II (CS~102G)}%
 {\wustl}%
-{}%
 {U(1)}%
 {Object-oriented programming concepts, exceptions, GUIs, threads, concurrency, synchronization in Java.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{Jan}{Apr 2000}
 \end{itemize}}
 
-\cventry%
-{}%
+\teachingasstentry%
 {Programming Concepts and Practice (CS~504N)}%
 {\wustl}%
-{}%
 {G(1)}%
 {Object-oriented programming concepts, threads, basic algorithms in Java.
-\begin{itemize}
+\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{Aug}{Dec 1999}
 \end{itemize}}
 
@@ -367,14 +355,14 @@ performance evaluation, compilers, and programming language theory.}
 
 \subsection{Master's Thesis}
 
-\cvitem{Jul 2013}{Joeri van Eekelen (co-advised with Johan Jeuring): Type-Changing Program Transformations with Pattern Matching}
-\cvitem{May 2013}{Tom Hastjarjanto (co-advised with Johan Jeuring): Strategies for Real-Time Video Games}
-\cvitem{Feb 2013}{Bram Schuur (co-advised with Johan Jeuring): A Type-Changing, Semantics-Preserving Program Transformation System}
-\cvitem{Aug 2009}{Eelco Lempsik (co-advised with Andres Löh): Generic Type-Safe \texttt{diff} and \texttt{patch} for Families of Datatypes}
+\ccvitem{Jul 2013}{Joeri van Eekelen (co-advised with Johan Jeuring): Type-Changing Program Transformations with Pattern Matching}
+\ccvitem{May 2013}{Tom Hastjarjanto (co-advised with Johan Jeuring): Strategies for Real-Time Video Games}
+\ccvitem{Feb 2013}{Bram Schuur (co-advised with Johan Jeuring): A Type-Changing, Semantics-Preserving Program Transformation System}
+\ccvitem{Aug 2009}{Eelco Lempsik (co-advised with Andres Löh): Generic Type-Safe \texttt{diff} and \texttt{patch} for Families of Datatypes}
 
 \subsection{Experimentation Projects}
 
-\cvitem{2012}{Thijs Alkemade: Type Holes in GHC}
+\ccvitem{2012}{Thijs Alkemade: Type Holes in GHC}
 
 %-------------------------------------------------------------------------------
 
@@ -388,7 +376,7 @@ performance evaluation, compilers, and programming language theory.}
 
 \section{Talks}
 
-\cventry%
+\talksentry%
 {Aug 2013}%
 {Dissecting Different Flavors of Generic Programming in One Haskell Universe}%
 {Galois}%
@@ -398,7 +386,7 @@ performance evaluation, compilers, and programming language theory.}
 \\
 \url{https://github.com/spl/talks/tree/master/2013-08-galois}}
 
-\cventry%
+\talksentry%
 {Jun 2012}%
 {Generic Programming in Haskell}%
 {Lambda Luminaries}%
@@ -408,7 +396,7 @@ performance evaluation, compilers, and programming language theory.}
 \\
 \url{https://github.com/spl/talks/tree/master/2012-06-lambda-luminaries}}
 
-\cventry%
+\talksentry%
 {Nov 2011}%
 {Generic Deriving in GHC 7.2}%
 {Dutch Haskell Users Group}%
@@ -418,7 +406,7 @@ performance evaluation, compilers, and programming language theory.}
 \\
 \url{https://github.com/spl/talks/tree/master/2011-11-dutch-hug}}
 
-\cventry%
+\talksentry%
 {Sep 2009}%
 {Extensibility and Type Safety in Formatting: The Design of ``xformat''}%
 {Dutch Haskell Users Group}%
@@ -428,7 +416,7 @@ performance evaluation, compilers, and programming language theory.}
 \\
 \url{https://github.com/spl/talks/tree/master/2009-09-dutch-hug}}
 
-\cventry%
+\talksentry%
 {Jul 2009}%
 {Fun and Generic Things to Do with EMGM}%
 {London Haskell Users Group}%
@@ -442,35 +430,31 @@ performance evaluation, compilers, and programming language theory.}
 
 \section{Professional \& Technical Organizations}
 
-\cvitem[-1em]{\daterange{1999}{present}}{ACM
-\begin{itemize}
+\ccvitem[-1em]{\daterange{1999}{present}}{ACM
+\begin{itemize}[leftmargin=2em,nosep]
 \item 1999, 2000: Treasurer, \wustlshort{} student chapter
 \item 2001: President, \wustlshort{} student chapter
 \end{itemize}}
 
-\cvitem[-1em]{\daterange{2009}{2013}}{Dutch Haskell Users Group (``Dutch HUG'')
-\begin{itemize}
+\ccvitem[-1em]{\daterange{2009}{2013}}{Dutch Haskell Users Group (``Dutch HUG'')
+\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{May 2010}{Mar 2013}: Monthly Meeting Coordinator
 \item Apr 2010, Apr 2012: Organized Dutch HUG Days (talks, hackathon)
 \end{itemize}}
 
-\cvitem[-1em]{\daterange{2002}{2011}}{IEEE
-\begin{itemize}
+\ccvitem[-1em]{\daterange{2002}{2011}}{IEEE
+\begin{itemize}[leftmargin=2em,nosep]
 \item \daterange{2002}{2003}: Vice president, \wustlshort{} student chapter
 \end{itemize}}
 
 %-------------------------------------------------------------------------------
-% NOTE! Page break to prevent the next subsection header from being alone at the
-%       end of the page.
-\newpage
-%-------------------------------------------------------------------------------
 
 \section{Awards}
 
-\cvitem{2008}{NWO Grant for Real-Life Datatype-Generic Programming, \uu}
-\cvitem{2003}{Engineering Doctoral Fellowship, \ut}
-\cvitem{2003}{MCD Fellowship, \ut}
-\cvitem{1998}{Eagle Scout}
+\ccvitem{2008}{NWO Grant for Real-Life Datatype-Generic Programming, \uu}
+\ccvitem{2003}{Engineering Doctoral Fellowship, \ut}
+\ccvitem{2003}{MCD Fellowship, \ut}
+\ccvitem{1998}{Eagle Scout}
 
 \end{document}
 
