@@ -39,7 +39,7 @@
 
 % moderncvstylecustom.sty:
 \RequirePackage{fontspec}
-\setmainfont{Garamond Premier Pro}
+\setmainfont{GaramondPremrPro}
 \setmonofont[Scale=MatchLowercase]{Fira Code Light}
 
 % symbols
@@ -137,7 +137,14 @@
   {#3}}
 
 % moderncvstylecustom.sty:
-%\patchcmd{\makeletterclosing}{\bfseries}{\bfseries\color{color1}}{}{}
+% Use Semibold for opening and closing
+\patchcmd{\makeletterhead}{\@opening}{{\fontspec{GaramondPremrPro-Smbd}\@opening}}{}{}
+\patchcmd{\makeletterclosing}{\@closing}{{\fontspec{GaramondPremrPro-Smbd}\@closing}}{}{}
+\patchcmd{\makeletterclosing}{\bfseries}{\fontspec{GaramondPremrPro-Smbd}}{}{}
+
+% moderncvstylecustom.sty:
+% Remove the name from the letter footer.
+\patchcmd{\makeletterfoot}{\bfseries\upshape\@firstname~\@lastname}{}{}{}
 
 \endinput
 
