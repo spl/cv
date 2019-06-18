@@ -15,12 +15,22 @@
 % For \xspace: checks for space after command
 \usepackage{xspace}
 
+% For \relsize
+\usepackage{relsize}
+
 % For ordinal numbers, use \nth{1} for 1st
 \usepackage[super]{nth}
 
 % For options to \begin{itemize} such as leftmargin and nosep
 % - https://tex.stackexchange.com/a/91128/16670
 \usepackage{enumitem}
+
+% Commands
+
+% C++:
+% - https://tex.stackexchange.com/q/4302/16670
+% - Adjust this for the main font used.
+\newcommand\cpplang{C\nolinebreak[4]\hspace{-0.05em}\raisebox{0.3ex}{\relsize{-1}{\textbf{++}}}}
 
 %-------------------------------------------------------------------------------
 
